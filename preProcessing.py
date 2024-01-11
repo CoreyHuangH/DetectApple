@@ -16,5 +16,7 @@ def preProcessing(img: np.ndarray) -> np.ndarray:
     imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     imgGray = cv2.bitwise_and(imgGray, imgGray, mask=mask)
 
-    imgThresh = cv2.adaptiveThreshold(imgGray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, 11, 2)
+    imgThresh = cv2.adaptiveThreshold(
+        imgGray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, 11, 2
+    )
     return imgThresh
