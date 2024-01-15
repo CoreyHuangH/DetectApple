@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 
-def findContours(imgTresh: np.ndarray, original_img: np.ndarray) -> np.ndarray:
+def findContours(imgTresh, original_img):
     contours, hierarchy = cv2.findContours(
         imgTresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE
     ) # Find the contours

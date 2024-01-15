@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 
-def preProcessing(img: np.ndarray) -> np.ndarray:
+def preProcessing(img):
     imgBlur = cv2.GaussianBlur(img, (9, 9), 3)  # Blur the image to remove noise
     imgHSV = cv2.cvtColor(imgBlur, cv2.COLOR_BGR2HSV)  # Convert to HSV
     h_min, h_max = 0, 18
